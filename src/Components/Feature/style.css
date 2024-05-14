@@ -1,0 +1,130 @@
+.Feature-section{
+    width: 100%;
+    background-color: #2A5B1E;
+    display: flex;
+    position: relative;
+
+}
+.feature-box{
+width: 100%;
+position: relative;
+}
+.title-feature{
+    font-family: Hind vadodara;
+font-size: 24px;
+font-weight: 600;
+line-height: 30.17px;
+text-align: left;
+
+}
+.content-feature{
+    font-family: Hind vadodara;
+font-size: 16px;
+font-weight: 400;
+line-height: 20.8px;
+text-align: left;
+height: 70px;
+}
+     .feature-box-container{
+         position: absolute;
+         bottom: 20px;
+         color: white;
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+         padding: 20px;
+
+     }
+
+.feature-box>img{
+    width: 100%;
+    object-fit: contain;
+}
+/* .content-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    align-items: center;
+    background-color: darkolivegreen;
+    color: white;
+    transition: all ease-in 1s;
+}
+.Feature-container{
+    width: 100%;
+    height: 100%;
+    transition: all ease-in 1s;
+}
+.Feature-section-container{
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-wrap: wrap;
+}
+.Feature-header{
+    width: 100%;
+    text-align: center;
+    color: darkolivegreen;
+    font-family: Yantramanav;
+    font-size: 40px;
+    line-height: 80px;
+}
+
+.Box-circle{
+    box-shadow: 0px 3.0649349689483643px 3.0649349689483643px 0px #00000040;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFD700;
+   position: absolute;
+   bottom: -20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #001F3F;
+   font-size: 20px;
+}
+.Box-circle{
+    transform: rotate(-45deg);
+    transition: all 400ms ease-in;
+}
+.Box-circle:hover{
+    transform: rotate(0);
+}
+.Feature{
+    width: 280px;
+height: 350px;
+display: flex;
+
+justify-content: center;
+align-items: center;
+position: relative;
+flex-direction: column;
+border-radius: 4px;
+}
+.Feature-content{
+    width: 100%;
+  height: 25%;
+    font-family: Yantramanav;
+font-size: 20px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+line-height: 26px;
+background-color: darkolivegreen;
+letter-spacing: 0em;
+text-align: center;
+}
+.Feature-img{
+    width: 100%;
+    height: 75%;
+}
+.Feature-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */

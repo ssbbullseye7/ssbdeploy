@@ -1,0 +1,248 @@
+.blogs-container{
+    
+    background: #2A5B1E;
+    /* height: 90vh; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding-left: 80px;
+    padding-top: 90px;
+    /* padding-bottom:50px; */
+}
+.blogs-container-header{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 400px;
+}
+.blogs-container-header-title{
+    width: 360px;
+    font-family: hind vadodara;
+font-size: 64px;
+font-weight: 700;
+line-height: 68px;
+text-align: left;
+color: #FFCB11;
+
+
+    
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiperSlide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  background-color: #2A5B1E;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  /* .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+  
+  .swiperSlide {
+    width: 220px !important;
+    margin-right: 30px !important;
+  }
+.blogs-carousal{
+   
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+ } 
+ .blogs-carousal-container{
+    display: flex;
+    gap: 30px;
+
+    width:800px;
+ }
+/* .blogs-carousal{
+    width: 800px;
+    margin: 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow-x:hidden;
+  } */
+  
+.next-prev-button{
+    display: flex;
+    gap: 10px;
+    /* position: absolute; */
+    /* right: 50px;
+    bottom: 20px; */
+    justify-content: flex-end;
+    padding-right: 50px;
+    align-items: center;
+}
+.carousal-card{
+    width:220px;
+height:294px;
+gap: 16px;
+background-color: #2A5B1E;
+display: flex;
+flex-direction: column;
+cursor: pointer;
+}
+.card-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+.card-title{
+    font-family: Source Sans Pro;
+font-size: 24px;
+font-weight: 600;
+line-height: 30.17px;
+text-align: left;
+white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; 
+  height: 25x;
+color: white;
+}
+.card-date{
+    font-family: Source Sans Pro;
+font-size: 16px;
+font-weight: 600;
+line-height: 20.11px;
+text-align: left;
+color: white;
+}
+.blogs-container-header-content{
+    width: 350px;
+    font-family: Hind vadodara;
+font-size: 16px;
+font-weight: 400;
+line-height: 20.8px;
+text-align: left;
+color: white;
+
+    
+}
+/* .blogs-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.blog-box-container{
+    display: flex;
+    justify-content: space-around;
+  
+  padding: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.blog-image{
+    height: 50%;
+    width: 100%;
+    background-color: red;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.blog-image>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.keyword{
+    padding:0px 10px 0px 10px;
+    font-family: DM Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: 0.5px;
+text-align: left;
+
+}
+.blog-title{
+    padding:0px 10px 0px 10px;
+font-family: DM Sans;
+font-size: 28px;
+font-weight: 500;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.blog-para{
+    padding:0px 10px 10px 10px;
+font-family: Hind Vadodara;
+font-size: 15px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3; 
+  max-height: 5em; 
+
+}
+.blog-content{
+    height: 50%;
+    width: 100%;
+    background: darkolivegreen;
+   display: flex;
+   gap: 10px;
+   flex-direction: column;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: white;
+}
+.blog{
+    width: 320px;
+height:420px;
+border-radius: 17px;
+cursor: pointer;
+}
+.blog-heading{
+font-family: Yantramanav;
+font-size: 40px;
+line-height: 90px;
+letter-spacing: 0em;
+text-align: center;
+color: darkolivegreen;
+}
+.Explore-button{
+    width: 200px;
+height: 50px;
+
+border-radius: 5px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+background-color: white;
+font-family: Hind Vadodara;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+
+
+} */

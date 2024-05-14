@@ -1,0 +1,89 @@
+.Footer{
+   /* background: #001F3F; */
+   background: #2A5B1E;
+   padding:20px;
+   padding-top: 50px;
+   padding-left:80px ;
+}
+.footer-container{
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.logo-quote{
+    /* font-family: Gilda Display; */
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+color: white;
+}
+.logo-icon-container{
+    display: flex;
+    gap: 10px;
+}
+
+.logo-icon{
+    height:30px;
+
+    
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
+}
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+        justify-content: center;
+      
+}
+.tnc{
+    text-decoration: none;
+    color: white;
+}
+.Contact-Us{
+    width: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 28px;
+    padding-right: 20px;
+}
+.Contact-Us-header{
+    /* font-family: Gilda Display; */
+font-size: 24px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: left;
+color: #FFCB11;
+font-family: hind vadodara;
+font-weight: 700;
+text-align: left;
+
+}
+.copyright{
+display: flex;
+flex-wrap: wrap;
+color: white;
+justify-content: center;
+align-items: center;
+font-family: Hind Vadodara;
+font-size: 12px;
+padding-top: 10px;
+padding-left: 10px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+}
