@@ -170,7 +170,29 @@ function Enroll() {
     setSlot("");
     setState("");
   }
+  const [placeholder, setPlaceholder] = useState('0');
 
+  const handleRegistrationChange = (e) => {
+    setRegistration(e.target.value);
+
+    // Update placeholder based on the selected registration type
+    switch (e.target.value) {
+      case 'Batch 1 Registration ( 2-6 Candidates )':
+        setPlaceholder('12500');
+        break;
+      case 'Batch 2 Registration ( 7-11 Candidates )':
+        setPlaceholder('11500');
+        break;
+      case 'Batch 3 Registration ( 12-16 Candidates )':
+        setPlaceholder('10500');
+        break;
+      case 'One on One':
+        setPlaceholder('15000');
+        break;
+      default:
+        setPlaceholder('0');
+    }
+  };
   const handlePayment = useCallback((e) => {
     //   const order = await createOrder(params);
     e.preventDefault();
@@ -428,6 +450,7 @@ function Enroll() {
               value={registration}
               onChange={(e) => {
                 setRegistration(e.target.value);
+                handleRegistrationChange();
               }}
               required
             >
@@ -440,6 +463,9 @@ function Enroll() {
               </option>
               <option value="Batch 3 Registration ( 12-16 Candidates )">
                 Batch 3 Registration ( 12-16 Candidates )
+              </option>
+              <option value="One on One">
+              One on One
               </option>
             </select>{" "}
           </div>
@@ -618,7 +644,7 @@ function Enroll() {
               id="amount"
               class="form-control"
               type="text"
-              placeholder="10000"
+              placeholder={placeholder}
               readonly=""
             />
           </div>
