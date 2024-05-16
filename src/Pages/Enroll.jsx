@@ -172,11 +172,14 @@ function Enroll() {
   }
   const [placeholder, setPlaceholder] = useState('0');
 
-  const handleRegistrationChange = (e) => {
-    setRegistration(e.target.value);
+
+  useEffect(()=>{
+
+      const handleRegistrationChange = () => {
+  
 
     // Update placeholder based on the selected registration type
-    switch (e.target.value) {
+    switch (registration) {
       case 'Batch 1 Registration ( 2-6 Candidates )':
         setPlaceholder('12500');
         break;
@@ -193,6 +196,8 @@ function Enroll() {
         setPlaceholder('0');
     }
   };
+      handleRegistrationChange();
+  },[registration]);
   const handlePayment = useCallback((e) => {
     //   const order = await createOrder(params);
     e.preventDefault();
@@ -450,7 +455,7 @@ function Enroll() {
               value={registration}
               onChange={(e) => {
                 setRegistration(e.target.value);
-                handleRegistrationChange();
+            
               }}
               required
             >
