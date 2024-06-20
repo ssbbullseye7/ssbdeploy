@@ -126,7 +126,7 @@ function Aboutceo() {
                 />
               </svg>{" "}
               We provide a comprehensive feedback to the individuals, to enable them to leverage their strengths and work on their areas for improvement. </div>
-            <div className="about-left-point">
+{/*             <div className="about-left-point">
               <svg
                 width="17"
                 height="17"
@@ -140,7 +140,7 @@ function Aboutceo() {
                 />
               </svg>{" "}
               We equip you with skills and confidence needed to conquer these rigorous assessments.
-            </div>
+            </div> */}
           </div>
         </div>
 
