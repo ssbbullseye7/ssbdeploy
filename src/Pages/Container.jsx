@@ -29,7 +29,7 @@ function Container() {
         
       
         {/* <Employee/> */}
-        <Blogs/>
+{/*         <Blogs/> */}
         <Contact/>
             </>}
        
