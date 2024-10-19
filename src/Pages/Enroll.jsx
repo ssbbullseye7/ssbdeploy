@@ -461,7 +461,7 @@ function Enroll() {
             >
               <option value="">Select Type</option>
               <option value="Batch of 15 Candidates(Special Discount for course-04th Nov 2024)">
-              Discounted Batch of 15 Candidates(Discounted batch 04th Nov 2024)
+              Batch of 15 Candidates(Special Discount for course-04th Nov 2024)
               </option>
               {/* <option value="Batch 2 Registration ( 7-11 Candidates )">
                 Batch 2 Registration ( 7-11 Candidates )
