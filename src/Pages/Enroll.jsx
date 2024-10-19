@@ -180,7 +180,7 @@ function Enroll() {
 
     // Update placeholder based on the selected registration type
     switch (registration) {
-      case 'Discounted Batch of 15 Candidates(Discounted batch 04th Nov 2024':
+      case 'Discounted Batch of 15 Candidates(Discounted batch 04th Nov 2024)':
         setPlaceholder('10000');
         break;
       // case 'Batch 2 Registration ( 7-11 Candidates )':
