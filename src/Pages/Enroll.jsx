@@ -305,7 +305,6 @@ function Enroll() {
       className="form-control"
       value={army}
       onChange={(e) => setArmy(e.target.value)}
-      required
       placeholder="Enter Type of Entry"
     />
             </label>
@@ -351,7 +350,6 @@ function Enroll() {
       className="form-control"
       value={navy}
       onChange={(e) => setNavy(e.target.value)}
-      required
       placeholder="Enter Type of Entry"
     />
             </label>
@@ -397,7 +395,6 @@ function Enroll() {
       className="form-control"
       value={force}
       onChange={(e) => setForce(e.target.value)}
-      required
       placeholder="Enter Type of Entry"
     />
             </label>
