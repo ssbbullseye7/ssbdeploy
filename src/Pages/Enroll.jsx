@@ -558,7 +558,7 @@ function Enroll() {
               required
             />
           </div>
-          <div class="form-group">
+          {/* <div class="form-group">
             <label>
               Date of Birth <small>*</small>
             </label>
@@ -575,7 +575,24 @@ function Enroll() {
               //   pattern="^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\d{4}$"
               required
             />
-          </div>
+          </div> */}
+          <div class="form-group">
+  <label>
+    Age <small>*</small>
+  </label>
+  <input
+    name="dob"
+    id="dob"
+    class="form-control"
+    type="number"
+    placeholder="Enter Your Age"
+    value={dob}
+    onChange={(e) => {
+      setDob(e.target.value);
+    }}
+    required
+  />
+</div>
           <div class="form-group">
             <label>
               Whatsapp Number<small>*</small>
