@@ -186,7 +186,7 @@ function Enroll() {
       // case 'Batch 2 Registration ( 7-11 Candidates )':
       //   setPlaceholder('11500');
       //   break;
-      case 'Batch of 15 Candidates':
+      case 'Regular Batch of 15 Candidates':
         setPlaceholder('15000');
         break;
       // case 'One on One':
