@@ -254,7 +254,7 @@ function Enroll() {
     <Toaster></Toaster>
       <BackDetailsModal isOpen={isModalOpen} closeModal={closeModal} />
       <div className="Enroll-page" id="enroll">
-        <div className="Enroll-heading">Enroll now</div>
+        <div className="Enroll-heading">Enroll Now</div>
         <form
           onSubmit={(e) => {
             handlePayment(e);
@@ -265,7 +265,7 @@ function Enroll() {
             <legend>Entry Applied For*</legend>
             <label htmlFor="Indian-army" className="form-group">
               Indian Army
-              <select
+              {/* <select
                 id="ssbarmy"
                 name="ssbarmy"
                 class="form-control"
@@ -297,11 +297,21 @@ function Enroll() {
                 <option value="SSCW (NCC)">SSCW (NCC)</option>
                 <option value="SSCW (JAG)">SSCW (JAG)</option>
                 <option value="SSC TECH (WOMEN)">SSC TECH (WOMEN)</option>
-              </select>
+              </select> */}
+              <input
+      id="army-entry"
+      name="army-entry"
+      type="text"
+      className="form-control"
+      value={army}
+      onChange={(e) => setArmy(e.target.value)}
+      required
+      placeholder="Enter Type of Entry"
+    />
             </label>
             <label htmlFor="Indian-army" className="form-group">
               Indian Navy
-              <select
+              {/* <select
                 id="ssbarmy"
                 name="ssbarmy"
                 class="form-control"
@@ -333,11 +343,21 @@ function Enroll() {
                 <option value="SSCW (NCC)">SSCW (NCC)</option>
                 <option value="SSCW (JAG)">SSCW (JAG)</option>
                 <option value="SSC TECH (WOMEN)">SSC TECH (WOMEN)</option>
-              </select>
+              </select> */}
+              <input
+      id="navy-entry"
+      name="navy-entry"
+      type="text"
+      className="form-control"
+      value={navy}
+      onChange={(e) => setNavy(e.target.value)}
+      required
+      placeholder="Enter Type of Entry"
+    />
             </label>
             <label htmlFor="Indian-army" className="form-group">
               Indian Air Force
-              <select
+              {/* <select
                 id="ssbarmy"
                 name="ssbarmy"
                 class="form-control"
@@ -369,9 +389,20 @@ function Enroll() {
                 <option value="SSCW (NCC)">SSCW (NCC)</option>
                 <option value="SSCW (JAG)">SSCW (JAG)</option>
                 <option value="SSC TECH (WOMEN)">SSC TECH (WOMEN)</option>
-              </select>
+              </select> */}
+               <input
+      id="force-entry"
+      name="force-entry"
+      type="text"
+      className="form-control"
+      value={force}
+      onChange={(e) => setForce(e.target.value)}
+      required
+      placeholder="Enter Type of Entry"
+    />
             </label>
           </fieldset>
+          
 
           <div class="form-group">
             <label>
@@ -406,7 +437,7 @@ function Enroll() {
               <option value="15"> 15 </option>
             </select>
           </div>
-          <div class="form-group">
+          {/* <div class="form-group">
             <label>
               Presently serving in Army/Navy/Airforce<small>*</small>
             </label>
@@ -424,9 +455,9 @@ function Enroll() {
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
-          </div>
+          </div> */}
 
-          <div class="form-group">
+          {/* <div class="form-group">
             <label>
               Training Module Required<small>*</small>
             </label>
@@ -443,7 +474,7 @@ function Enroll() {
               <option value="">Select Module</option>
               <option value="Composite">Composite</option>
             </select>{" "}
-          </div>
+          </div> */}
           <div class="form-group">
             <label>
               Registration Type<small>*</small>
@@ -474,7 +505,7 @@ function Enroll() {
               </option> */}
             </select>{" "}
           </div>
-          <div class="form-group">
+          {/* <div class="form-group">
             <label>
               Slot Training<small>*</small>
             </label>
@@ -493,7 +524,7 @@ function Enroll() {
               <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM</option>
               <option value="07:00 PM - 09:00 PM">07:00 PM - 09:00 PM</option>
             </select>
-          </div>
+          </div> */}
           <div class="form-group">
             <label>
               Full Name <small>*</small>
@@ -583,7 +614,7 @@ function Enroll() {
               required
             />
           </div>
-          <div class="form-group">
+          {/* <div class="form-group">
             <label>
               State / Union Territory<small>*</small>
             </label>
@@ -639,7 +670,7 @@ function Enroll() {
               <option value="Uttarakhand">Uttarakhand</option>
               <option value="West Bengal">West Bengal</option>
             </select>
-          </div>
+          </div> */}
           <div class="form-group">
             <label>
               Total Amount to be Paid <small>*</small>
