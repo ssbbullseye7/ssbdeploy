@@ -180,18 +180,18 @@ function Enroll() {
 
     // Update placeholder based on the selected registration type
     switch (registration) {
-      case 'Batch 1 Registration ( 2-6 Candidates )':
-        setPlaceholder('12500');
+      case 'Discounted Batch of 15 Candidates(Discounted batch 04th Nov 2024':
+        setPlaceholder('10000');
         break;
-      case 'Batch 2 Registration ( 7-11 Candidates )':
-        setPlaceholder('11500');
-        break;
-      case 'Batch 3 Registration ( 12-16 Candidates )':
-        setPlaceholder('10500');
-        break;
-      case 'One on One':
+      // case 'Batch 2 Registration ( 7-11 Candidates )':
+      //   setPlaceholder('11500');
+      //   break;
+      case 'Batch of 15 Candidates':
         setPlaceholder('15000');
         break;
+      // case 'One on One':
+      //   setPlaceholder('20000');
+      //   break;
       default:
         setPlaceholder('0');
     }
@@ -460,18 +460,18 @@ function Enroll() {
               required
             >
               <option value="">Select Type</option>
-              <option value="Batch 1 Registration ( 2-6 Candidates )">
-                Batch 1 Registration ( 2-6 Candidates )
+              <option value="Discounted Batch of 15 Candidates(Discounted batch 04th Nov 2024)">
+              Discounted Batch of 15 Candidates(Discounted batch 04th Nov 2024)
               </option>
-              <option value="Batch 2 Registration ( 7-11 Candidates )">
+              {/* <option value="Batch 2 Registration ( 7-11 Candidates )">
                 Batch 2 Registration ( 7-11 Candidates )
+              </option> */}
+              <option value="Regular Batch of 15 Candidates">
+                Regular Batch of 15 Candidates
               </option>
-              <option value="Batch 3 Registration ( 12-16 Candidates )">
-                Batch 3 Registration ( 12-16 Candidates )
-              </option>
-              <option value="One on One">
+              {/* <option value="One on One">
               One on One
-              </option>
+              </option> */}
             </select>{" "}
           </div>
           <div class="form-group">
@@ -568,14 +568,14 @@ function Enroll() {
           </div>
           <div class="form-group">
             <label>
-              Village / City / District <small>*</small>
+              City / District <small>*</small>
             </label>
             <input
               name="address"
               id="address"
               class="form-control"
               type="text"
-              placeholder="Village / City / District"
+              placeholder="City / District"
               value={city}
               onChange={(e) => {
                 setCity(e.target.value);
