@@ -183,15 +183,15 @@ function Enroll() {
       case 'Special Discount batch (15 candidates)-04 Nov 24':
         setPlaceholder('10000');
         break;
-      case 'Special Discount batch (15 candidates)-17 Nov 24':
-        setPlaceholder('12500');
-        break;
+      //case 'Special Discount batch (15 candidates)-17 Nov 24':
+        //setPlaceholder('12500');
+        //break;
       case 'Regular Batch (Max 15 Candidates)':
         setPlaceholder('15000');
         break;
-      // case 'One on One':
-      //   setPlaceholder('20000');
-      //   break;
+      case 'One on One':
+        setPlaceholder('20000');
+        break;
       default:
         setPlaceholder('0');
     }
@@ -491,15 +491,15 @@ function Enroll() {
               <option value="Special Discount batch (15 candidates)-04 Nov 24">
               Special Discount batch (15 candidates)-04 Nov 24
               </option>
-              <option value="Special Discount batch (15 candidates)-17 Nov 24">
-              Special Discount batch (15 candidates)-17 Nov 24
-              </option>
+              {/*<option value="Special Discount batch (15 candidates)-17 Nov 24">
+              //Special Discount batch (15 candidates)-17 Nov 24
+            //</option>*/}
               <option value="Regular Batch (Max 15 Candidates)">
               Regular Batch (Max 15 Candidates)
               </option>
-              {/* <option value="One on One">
+             <option value="One on One">
               One on One
-              </option> */}
+              </option>
             </select>{" "}
           </div>
           {/* <div class="form-group">
