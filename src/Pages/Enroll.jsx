@@ -180,13 +180,13 @@ function Enroll() {
 
     // Update placeholder based on the selected registration type
     switch (registration) {
-      case 'Special Discount batch (15 candidates)-04 Nov 24':
-        setPlaceholder('10000');
-        break;
+      // case 'Special Discount batch (15 candidates)-04 Nov 24':
+      //   setPlaceholder('10000');
+      //   break;
       //case 'Special Discount batch (15 candidates)-17 Nov 24':
         //setPlaceholder('12500');
         //break;
-      case 'Regular Batch (Max 15 Candidates)':
+      case 'Regular Batch (Max 10 Candidates)':
         setPlaceholder('15000');
         break;
       case 'One on One':
@@ -488,14 +488,14 @@ function Enroll() {
               required
             >
               <option value="">Select Type</option>
-              <option value="Special Discount batch (15 candidates)-04 Nov 24">
+              {/* <option value="Special Discount batch (15 candidates)-04 Nov 24">
               Special Discount batch (15 candidates)-04 Nov 24
-              </option>
+              </option> */}
               {/*<option value="Special Discount batch (15 candidates)-17 Nov 24">
               //Special Discount batch (15 candidates)-17 Nov 24
             //</option>*/}
-              <option value="Regular Batch (Max 15 Candidates)">
-              Regular Batch (Max 15 Candidates)
+              <option value="Regular Batch (Max 10 Candidates)">
+              Regular Batch (Max 10 Candidates)
               </option>
              <option value="One on One">
               One on One
