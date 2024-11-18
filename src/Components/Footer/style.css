@@ -23,7 +23,7 @@ letter-spacing: 0em;
 text-align: left;
 color: white;
 }
-.logo-icon-container{
+/* .logo-icon-container{
     display: flex;
     gap: 10px;
 }
@@ -38,14 +38,14 @@ color: white;
     align-items: center;
     border-radius: 50%;
     background-color: white;
-}
-.logo-container{
+} */
+/* .logo-container{
     display: flex;
     flex-direction: column;
     gap: 10px;
         justify-content: center;
       
-}
+} */
 .tnc{
     text-decoration: none;
     color: white;
@@ -86,4 +86,31 @@ font-weight: 500;
 line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
+}
+
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 10px;  /* Add space between elements */
+    justify-content: center;
+    align-items: center; /* Center align everything */
+}
+
+.logo-icon-container {
+    display: flex;
+    flex-direction: column; /* Stack the icons vertically */
+    gap: 10px; /* Space between each icon */
+    justify-content: center;
+    align-items: center; /* Center align the icons */
+}
+
+.logo-icon {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: white;
 }
