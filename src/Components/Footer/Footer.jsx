@@ -38,6 +38,18 @@ function Footer() {
                 <div className='logo-icon'><a href="https://www.instagram.com/ssbbullseye/" target="_blank" rel="noopener noreferrer"><FaInstagram style={{    color: "darkolivegreen"}}/></a></div>
                 <div className='logo-icon'><a href="https://www.linkedin.com/company/ssbbullseye/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><FaLinkedinIn style={{    color: "darkolivegreen"}}/></a></div>
             </div> */}
+            <div className='logo-icon-container'>
+    <div className='logo-icon'>
+      <a href="https://www.youtube.com/channel/UCd1VO9G4BzNXmKFNHTGkK4w" target="_blank" rel="noopener noreferrer">
+        <FaYoutube style={{ color: "darkolivegreen" }} />
+      </a>
+    </div>
+    <div className='logo-icon'>
+      <a href="https://www.instagram.com/ssbbullseye/" target="_blank" rel="noopener noreferrer">
+        <FaInstagram style={{ color: "darkolivegreen" }} />
+      </a>
+    </div>
+  </div>
          </div>
          {/* <div className='Contact-Us'>
             <div className='Contact-Us-header'>Policies</div>
@@ -48,12 +60,7 @@ function Footer() {
             {/* <div> < MdEmail style={{height:"15px",width:"15px"}}/> support@ssbbullseye.com</div> */}
             {/* </div>
          </div>  */}
-          <div className='logo-icon-container'>
           
-          <div className='logo-icon'><a href="https://www.youtube.com/channel/UCd1VO9G4BzNXmKFNHTGkK4w" target="_blank" rel="noopener noreferrer"><FaYoutube style={{ color: "darkolivegreen" }} /></a></div>
-          <div className='logo-icon'><a href="https://www.instagram.com/ssbbullseye/" target="_blank" rel="noopener noreferrer"><FaInstagram style={{ color: "darkolivegreen" }} /></a></div>
-          
-          </div>
          <div className='Contact-Us'>
             <div className='Contact-Us-header'>Contact Us</div>
             <div className='Contact-Us-content'>
