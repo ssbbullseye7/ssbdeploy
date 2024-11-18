@@ -92,17 +92,16 @@ text-align: left;
 .logo-container {
     display: flex;
     flex-direction: column; /* Stack content vertically */
-    gap: 10px;  /* Add space between elements */
+    gap: 10px;
     justify-content: center;
     align-items: center; /* Center align everything */
 }
 
 .logo-icon-container {
-    display: flex;
-    flex-direction: column; /* Stack the icons vertically */
-    gap: 10px; /* Space between each icon */
-    justify-content: center;
-    align-items: center; /* Center align the icons */
+    display: flex;         /* Align icons horizontally */
+    gap: 20px;             /* Space between icons */
+    justify-content: center;  /* Horizontally center the icons */
+    align-items: center;      /* Center the icons vertically */
 }
 
 .logo-icon {
