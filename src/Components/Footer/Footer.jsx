@@ -67,6 +67,12 @@ function Footer() {
     
             </div>
          </div>
+         <div className='logo-icon-container'>
+          
+          <div className='logo-icon'><a href="https://www.youtube.com/channel/UCd1VO9G4BzNXmKFNHTGkK4w" target="_blank" rel="noopener noreferrer"><FaYoutube style={{ color: "darkolivegreen" }} /></a></div>
+          <div className='logo-icon'><a href="https://www.instagram.com/ssbbullseye/" target="_blank" rel="noopener noreferrer"><FaInstagram style={{ color: "darkolivegreen" }} /></a></div>
+          
+          </div>
         </div>
         <div className='copyright'>
             Copyright © 2019 - 2023 , ssbbullseye.com - All Rights Reserved.
