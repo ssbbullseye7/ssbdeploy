@@ -50,7 +50,7 @@ function Aboutceo() {
                   fill="black"
                 />
               </svg>{" "}
-              We excel in guiding candidates toward success in SSB & NDA exams. 
+              We excel in guiding candidates toward success in SSB. 
             </div>
             <div className="about-left-point">
               <svg
