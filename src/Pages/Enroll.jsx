@@ -187,10 +187,10 @@ function Enroll() {
         //setPlaceholder('12500');
         //break;
       case 'Regular Batch (Max 10 Candidates)':
-        setPlaceholder('15000');
+        setPlaceholder('12000');
         break;
       case 'One on One':
-        setPlaceholder('20000');
+        setPlaceholder('15000');
         break;
       default:
         setPlaceholder('0');
