@@ -5,11 +5,14 @@ import svglogo from "../../Primarygreen.svg";
 // import { Link as RouterLink } from "react-router-dom";
 // import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 // import { setActiveLink } from "react-scroll/modules/mixins/scroller";
-function Navbar({setenroll,enroll}) {
-
+function Navbar({setenroll,enroll,setnda,nda}) {
+  const [isRegOpen, setIsRegOpen] = useState(false);
+  const regDropdownRef = useRef(null);
+  
   const [Active, SetActive] = useState("Home");
   const [check,setcheck]=useState(false);
  const [drop,setdrop]=useState(false);
+ const [mobileCoursesOpen, setMobileCoursesOpen] = useState(false);
   const smoothScrollTo = (id, callback) => {
     // Check if the current route is /enroll
    
@@ -124,6 +127,48 @@ function Navbar({setenroll,enroll}) {
   //   }
   // }, []);
 
+  const toggleRegDropdown = () => {
+    SetActive("Registration");
+    setIsRegOpen(!isRegOpen);
+  };
+  
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current && !dropdownRef.current.contains(event.target) &&
+        regDropdownRef.current && !regDropdownRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+        setIsRegOpen(false);
+      }
+    };
+  
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+  
+
+
+  const handleCoursesChange = (e) => {
+    const value = e.target.value;
+    // Reset select to placeholder after selection
+    e.target.selectedIndex = 0;
+    if (value === "ssb") {
+      // Scroll on the current page to element with id "ssb"
+      handleScrollTo('home');
+      SetActive("Courses");
+      setenroll(false);
+      setnda(false);
+    } else if (value === "nda") {
+      // Open a new page for NDA coaching Course
+      setnda(true);
+      setenroll(false);
+      SetActive("Courses");
+    }
+  };
+
   
   return (
     <div className="Nav">
@@ -144,6 +189,7 @@ function Navbar({setenroll,enroll}) {
               : { cursor: "pointer" }
           }
           onClick={() => {
+            setnda(false);
             setenroll(false);
             handleScrollTo('home');
             SetActive("Home");
@@ -157,7 +203,7 @@ function Navbar({setenroll,enroll}) {
               ?  { cursor: "pointer",color:"yellow",borderBottom:"1px solid yellow" }
               : { cursor: "pointer" }
           }
-          onClick={() => { setenroll(false);handleScrollTo('about');SetActive("About us")}}
+          onClick={() => { setnda(false); setenroll(false);handleScrollTo('about');SetActive("About us")}}
         >
           {" "}
          
@@ -166,20 +212,51 @@ function Navbar({setenroll,enroll}) {
         </div>
        
         <div
-          style={
-           Active==="Registration"&& enroll===true
-              ?  { cursor: "pointer",color:"yellow",borderBottom:"1px solid yellow" }
-              : { cursor: "pointer" }
-          }
-          onClick={() => {
-            setenroll(true);
-            handleScrollTo('enroll');
-            SetActive("Registration");
-           
-          }}
-        >
-          Registration
-        </div>
+  style={
+    Active == "Registration"
+      ? { cursor: "pointer", color: "yellow", borderBottom: "1px solid yellow", position: "relative" }
+      : { cursor: "pointer", position: "relative" }
+  }
+  onClick={toggleRegDropdown}
+  className="eligibilty"
+>
+  Registration
+  {isRegOpen && (
+    <div className="dropdownr" ref={regDropdownRef} style={{ height: "120px" }}>
+      <div
+        className="dropdown-item"
+        onClick={() => {
+          setenroll(true);
+          setnda(false);
+          handleScrollTo('enroll');
+          SetActive("Registration");
+          setIsRegOpen(false);
+        }}
+      >
+        SSB Registration
+      </div>
+      <div
+        className="dropdown-item"
+        onClick={() => {
+          setenroll(true);
+          setnda(true);
+          SetActive("Registration");
+          setIsRegOpen(false);
+        }}
+      >
+        NDA Registration
+      </div>
+    </div>
+  )}
+</div>
+
+
+          <select className="courses-select" onChange={handleCoursesChange}>
+            <option value="" hidden>Courses</option>
+            <option value="ssb">SSB Preparation Course</option>
+            <option value="nda">NDA coaching Course</option>
+          </select>
+       
         <div
           style={
             Active == "Eligibilty"
@@ -204,7 +281,7 @@ function Navbar({setenroll,enroll}) {
               ?  { cursor: "pointer",color:"yellow",borderBottom:"1px solid yellow" }
               : { cursor: "pointer" }
           }
-          onClick={() => { setenroll(false);handleScrollTo('contact');SetActive("Contact us")}}
+          onClick={() => {setnda(false); setenroll(false);handleScrollTo('contact');SetActive("Contact us")}}
         >
           {" "}
             Contact
@@ -238,6 +315,7 @@ function Navbar({setenroll,enroll}) {
               : { cursor: "pointer",paddingRight:"50px", }
           }
           onClick={() => {
+            setnda(false);
             setenroll(false);
             handleScrollTo('home');
             SetActive("Home1");
@@ -253,7 +331,7 @@ function Navbar({setenroll,enroll}) {
               transition: "all 0.3s ease" }
               : { cursor: "pointer",paddingRight:"50px", }
           }
-          onClick={() => { setenroll(false);handleScrollTo('about');SetActive("About us")}}
+          onClick={() => { setnda(false); setenroll(false);handleScrollTo('about');SetActive("About us")}}
         >
           {" "}
          
@@ -261,23 +339,62 @@ function Navbar({setenroll,enroll}) {
          
         </div>
        
-        <div className="link1"
+        <div
+  className="link1"
+  style={
+    Active == "Registration"
+      ? { cursor: "pointer", fontWeight: "700", backgroundColor: "#FFCB11", paddingRight: "50px", color: "white", transition: "all 0.3s ease", position: "relative" }
+      : { cursor: "pointer", paddingRight: "50px", position: "relative" }
+  }
+  onClick={() => SetActive("Registration")}
+>
+  Registration
+</div>
+
+{/* Mobile dropdown for Registration */}
+<a
+  className="mobile-drop"
+  style={Active == "Registration" ? { paddingRight: "50px" } : { display: "none" }}
+  onClick={() => {
+    setenroll(true);
+    setnda(false);
+    handleScrollTo("enroll");
+    SetActive("Registration");
+  }}
+>
+  SSB Registration
+</a>
+<a
+  className="mobile-drop"
+  style={Active == "Registration" ? { paddingRight: "50px" } : { display: "none" }}
+  onClick={() => {
+    setenroll(true);
+    setnda(true);
+    handleScrollTo("enroll");
+    SetActive("Registration");
+  }}
+>
+  NDA Registration
+</a>
+
+
+        <div  className="link1"
           style={
-           Active==="Registration"&& enroll===true
-              ? { cursor: "pointer", fontWeight: "700", backgroundColor: "#FFCB11",paddingRight:"50px",
+            Active == "Courses"
+              ? { cursor: "pointer", fontWeight: "700",position:"relative", backgroundColor: "#FFCB11",paddingRight:"50px",
               color: "white",
               transition: "all 0.3s ease" }
-              : { cursor: "pointer",paddingRight:"50px", }
+              : { cursor: "pointer" ,position:"relative",paddingRight:"50px",}
           }
-          onClick={() => {
-            setenroll(true);
-            handleScrollTo('enroll');
-            SetActive("Registration");
-           
-          }}
+          onClick={() => {SetActive("Courses")}}
+        
         >
-          Registration
+          Courses
+          
         </div>
+        <a className="mobile-drop" style={ Active == "Courses"?{paddingRight:"50px",}:{display:"none"}} onClick = {() => setnda(false)&& setenroll(false) && handleScrollTo('home') && SetActive("Home")} >SSB Preparation Course</a>
+        <a className="mobile-drop" style={ Active == "Courses"?{paddingRight:"50px",}:{display:"none"}}  onClick = {() =>setnda(true) && setenroll(false)}> NDA coaching Course</a>
+
         <div  className="link1"
           style={
             Active == "Eligibilty"
@@ -305,7 +422,7 @@ function Navbar({setenroll,enroll}) {
               transition: "all 0.3s ease" }
               : { cursor: "pointer",paddingRight:"50px", }
           }
-          onClick={() => { setenroll(false);handleScrollTo('contact');SetActive("Contact us")}}
+          onClick={() => { setnda(false); setenroll(false);handleScrollTo('contact');SetActive("Contact us")}}
         >
           {" "}
             Contact

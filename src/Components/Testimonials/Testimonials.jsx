@@ -14,21 +14,12 @@ import sak from "../../shaksham.jpg";
 import ary from "../../aryaman.mp4";
 import saks from "../../shaksham.mp4";
 import shlok from "../../shlok.mp4";
-import ankit from "../../ankit.jpg";
-import ankitkum from "../../ANKIT.mp4";
 import profileimg from "../../profileimg.jpg";
 // import required modules
 import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules";
 
-export default function Testimonials() {
+export default function Testimonials({isPageNDA}) {
   const slidesData = [
-    {
-      imgSrc: ankit,
-      name: "Ankit Kumar",
-      url: ankitkum,
-      content:
-        "Recommended for NDA - 153rd course. After getting rejected in his earlier  attempts, Ankit approached ssbbullseye. He was provided with relevant guidance & mentorship during the 12 days intense training program which helped him clear the SSB in his fourth & final attempt. Kudos to his hardwork & perseverance. Out of  a total of 51 candidates, he was one of the 5 candidates who got recommended by 18 SSB, Allahabad (Prayagraj).",
-    },
     {
       imgSrc: ARYA,
       name: "Aryaman Bhatt",
@@ -79,7 +70,7 @@ export default function Testimonials() {
 
   return (
     <div className="testimonial-container">
-      <div className="testimonial-header">What Our Students Say</div>
+     {!isPageNDA  && <div className="testimonial-header">What Our Students Say</div>}
       <div className="testimonial-carousal">
         <Swiper
           // slidesPerView={2}

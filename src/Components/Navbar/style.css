@@ -160,6 +160,26 @@ color:white;
 -webkit-box-shadow: 2px 13px 22px -7px rgba(0,0,0,0.75);
 -moz-box-shadow: 2px 13px 22px -7px rgba(0,0,0,0.75);
  }
+ .dropdownr{
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ height: 0px;
+  justify-content: space-evenly;
+  background: #2a5b1e91;
+ 
+  position: absolute;
+  bottom: -120px;
+  border-radius:0px 0px 4px 4px ;
+  overflow: hidden;
+  left: -36px;
+  font-weight: 500;
+  box-shadow: 2px 13px 22px -7px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 13px 22px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 13px 22px -7px rgba(0,0,0,0.75);
+}
+
 
 
 .dropdown1{
@@ -196,3 +216,23 @@ overflow: hidden;
     color: white;
   }
   
+  .courses-container {
+    position: relative;
+  }
+  
+  .courses-select {
+    background-color: #2a5b1e00;
+    border: none;
+    color: white;
+    font-family: Yantramanav;
+    font-size: 18px;
+    padding: 5px ;
+    cursor: pointer;
+    width: 100px;
+  }
+  
+  .courses-select:focus {
+    outline: none;
+  }
+
+ 

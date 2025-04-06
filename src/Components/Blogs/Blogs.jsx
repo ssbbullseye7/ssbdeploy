@@ -83,10 +83,10 @@ function Blogs() {
     <div className="blogs-container">
       <div className="blogs-container-header">
         <div className="blogs-container-header-title">Recent Blogs & News</div>
-        {/* <div className="blogs-container-header-content">
+        <div className="blogs-container-header-content">
           Insight right in what you need to know and plan for achieving your
           goals and planning your future.
-        </div> */}
+        </div>
       </div>
       <div className="blogs-carousal">
         <div className="blogs-carousal-container">

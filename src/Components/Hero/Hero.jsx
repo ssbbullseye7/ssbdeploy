@@ -8,7 +8,7 @@ import vid from "../../ssbvid.mp4"
 import Enroll from "../../Pages/Enroll";
 import sol from "../../sol.png"
 // const imagesArray = [im1, im3];
-function Hero({setenroll,enroll}) {
+function Hero({setenroll,enroll }) {
   // const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // useEffect(() => {

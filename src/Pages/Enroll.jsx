@@ -170,34 +170,7 @@ function Enroll() {
     setSlot("");
     setState("");
   }
-  const [placeholder, setPlaceholder] = useState('0');
 
-
-  useEffect(()=>{
-
-      const handleRegistrationChange = () => {
-  
-
-    // Update placeholder based on the selected registration type
-    switch (registration) {
-      // case 'Special Discount batch (15 candidates)-04 Nov 24':
-      //   setPlaceholder('10000');
-      //   break;
-      //case 'Special Discount batch (15 candidates)-17 Nov 24':
-        //setPlaceholder('12500');
-        //break;
-      case 'Regular Batch (Max 10 Candidates)':
-        setPlaceholder('12000');
-        break;
-      case 'One on One':
-        setPlaceholder('15000');
-        break;
-      default:
-        setPlaceholder('0');
-    }
-  };
-      handleRegistrationChange();
-  },[registration]);
   const handlePayment = useCallback((e) => {
     //   const order = await createOrder(params);
     e.preventDefault();
@@ -254,7 +227,7 @@ function Enroll() {
     <Toaster></Toaster>
       <BackDetailsModal isOpen={isModalOpen} closeModal={closeModal} />
       <div className="Enroll-page" id="enroll">
-        <div className="Enroll-heading">Enroll Now</div>
+        <div className="Enroll-heading">Enroll now</div>
         <form
           onSubmit={(e) => {
             handlePayment(e);
@@ -265,7 +238,7 @@ function Enroll() {
             <legend>Entry Applied For*</legend>
             <label htmlFor="Indian-army" className="form-group">
               Indian Army
-              {/* <select
+              <select
                 id="ssbarmy"
                 name="ssbarmy"
                 class="form-control"
@@ -297,20 +270,11 @@ function Enroll() {
                 <option value="SSCW (NCC)">SSCW (NCC)</option>
                 <option value="SSCW (JAG)">SSCW (JAG)</option>
                 <option value="SSC TECH (WOMEN)">SSC TECH (WOMEN)</option>
-              </select> */}
-              <input
-      id="army-entry"
-      name="army-entry"
-      type="text"
-      className="form-control"
-      value={army}
-      onChange={(e) => setArmy(e.target.value)}
-      placeholder="Enter Type of Entry"
-    />
+              </select>
             </label>
             <label htmlFor="Indian-army" className="form-group">
               Indian Navy
-              {/* <select
+              <select
                 id="ssbarmy"
                 name="ssbarmy"
                 class="form-control"
@@ -342,20 +306,11 @@ function Enroll() {
                 <option value="SSCW (NCC)">SSCW (NCC)</option>
                 <option value="SSCW (JAG)">SSCW (JAG)</option>
                 <option value="SSC TECH (WOMEN)">SSC TECH (WOMEN)</option>
-              </select> */}
-              <input
-      id="navy-entry"
-      name="navy-entry"
-      type="text"
-      className="form-control"
-      value={navy}
-      onChange={(e) => setNavy(e.target.value)}
-      placeholder="Enter Type of Entry"
-    />
+              </select>
             </label>
             <label htmlFor="Indian-army" className="form-group">
               Indian Air Force
-              {/* <select
+              <select
                 id="ssbarmy"
                 name="ssbarmy"
                 class="form-control"
@@ -387,19 +342,9 @@ function Enroll() {
                 <option value="SSCW (NCC)">SSCW (NCC)</option>
                 <option value="SSCW (JAG)">SSCW (JAG)</option>
                 <option value="SSC TECH (WOMEN)">SSC TECH (WOMEN)</option>
-              </select> */}
-               <input
-      id="force-entry"
-      name="force-entry"
-      type="text"
-      className="form-control"
-      value={force}
-      onChange={(e) => setForce(e.target.value)}
-      placeholder="Enter Type of Entry"
-    />
+              </select>
             </label>
           </fieldset>
-          
 
           <div class="form-group">
             <label>
@@ -434,7 +379,7 @@ function Enroll() {
               <option value="15"> 15 </option>
             </select>
           </div>
-          {/* <div class="form-group">
+          <div class="form-group">
             <label>
               Presently serving in Army/Navy/Airforce<small>*</small>
             </label>
@@ -452,9 +397,9 @@ function Enroll() {
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
-          </div> */}
+          </div>
 
-          {/* <div class="form-group">
+          <div class="form-group">
             <label>
               Training Module Required<small>*</small>
             </label>
@@ -471,7 +416,7 @@ function Enroll() {
               <option value="">Select Module</option>
               <option value="Composite">Composite</option>
             </select>{" "}
-          </div> */}
+          </div>
           <div class="form-group">
             <label>
               Registration Type<small>*</small>
@@ -483,26 +428,22 @@ function Enroll() {
               value={registration}
               onChange={(e) => {
                 setRegistration(e.target.value);
-            
               }}
               required
             >
               <option value="">Select Type</option>
-              {/* <option value="Special Discount batch (15 candidates)-04 Nov 24">
-              Special Discount batch (15 candidates)-04 Nov 24
-              </option> */}
-              {/*<option value="Special Discount batch (15 candidates)-17 Nov 24">
-              //Special Discount batch (15 candidates)-17 Nov 24
-            //</option>*/}
-              <option value="Regular Batch (Max 10 Candidates)">
-              Regular Batch (Max 10 Candidates)
+              <option value="Batch 1 Registration ( 2-6 Candidates )">
+                Batch 1 Registration ( 2-6 Candidates )
               </option>
-             <option value="One on One">
-              One on One
+              <option value="Batch 2 Registration ( 7-11 Candidates )">
+                Batch 2 Registration ( 7-11 Candidates )
+              </option>
+              <option value="Batch 3 Registration ( 12-16 Candidates )">
+                Batch 3 Registration ( 12-16 Candidates )
               </option>
             </select>{" "}
           </div>
-          {/* <div class="form-group">
+          <div class="form-group">
             <label>
               Slot Training<small>*</small>
             </label>
@@ -521,7 +462,7 @@ function Enroll() {
               <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM</option>
               <option value="07:00 PM - 09:00 PM">07:00 PM - 09:00 PM</option>
             </select>
-          </div> */}
+          </div>
           <div class="form-group">
             <label>
               Full Name <small>*</small>
@@ -558,7 +499,7 @@ function Enroll() {
               required
             />
           </div>
-          {/* <div class="form-group">
+          <div class="form-group">
             <label>
               Date of Birth <small>*</small>
             </label>
@@ -575,24 +516,7 @@ function Enroll() {
               //   pattern="^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\d{4}$"
               required
             />
-          </div> */}
-          <div class="form-group">
-  <label>
-    Age <small>*</small>
-  </label>
-  <input
-    name="dob"
-    id="dob"
-    class="form-control"
-    type="number"
-    placeholder="Enter Your Age"
-    value={dob}
-    onChange={(e) => {
-      setDob(e.target.value);
-    }}
-    required
-  />
-</div>
+          </div>
           <div class="form-group">
             <label>
               Whatsapp Number<small>*</small>
@@ -613,14 +537,14 @@ function Enroll() {
           </div>
           <div class="form-group">
             <label>
-              City / District <small>*</small>
+              Village / City / District <small>*</small>
             </label>
             <input
               name="address"
               id="address"
               class="form-control"
               type="text"
-              placeholder="City / District"
+              placeholder="Village / City / District"
               value={city}
               onChange={(e) => {
                 setCity(e.target.value);
@@ -628,7 +552,7 @@ function Enroll() {
               required
             />
           </div>
-          {/* <div class="form-group">
+          <div class="form-group">
             <label>
               State / Union Territory<small>*</small>
             </label>
@@ -684,7 +608,7 @@ function Enroll() {
               <option value="Uttarakhand">Uttarakhand</option>
               <option value="West Bengal">West Bengal</option>
             </select>
-          </div> */}
+          </div>
           <div class="form-group">
             <label>
               Total Amount to be Paid <small>*</small>
@@ -694,7 +618,7 @@ function Enroll() {
               id="amount"
               class="form-control"
               type="text"
-              placeholder={placeholder}
+              placeholder="10000"
               readonly=""
             />
           </div>
