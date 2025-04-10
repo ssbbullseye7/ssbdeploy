@@ -334,13 +334,13 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
                 className="dropdown-item"
                 onClick={() => handleCoursesSelection("ssb")}
               >
-                SSB Preparation Course
+                SSB Exam Preparation
               </div>
               <div
                 className="dropdown-item"
                 onClick={() => handleCoursesSelection("nda")}
               >
-                NDA Coaching Course
+                NDA Exam Coaching
               </div>
             </div>
           )}
