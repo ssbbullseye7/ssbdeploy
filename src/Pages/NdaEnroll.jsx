@@ -127,13 +127,15 @@ function NdaEnroll() {
     formDatab.append("Email", Email);
     formDatab.append("Dob", dob);
     formDatab.append("Number", number);
+    formDatab.append("Applied_for", appliedfor);
     formDatab.append("Address",address);
     // formDatab.append("Slot", slot);
-    formDatab.append("Applied_for", appliedfor);
+    
 
     newdat(formDatab);
     fetch(
-      "https://script.google.com/macros/s/AKfycbyfFhOwc_--JaCzah4oZn9jSzfGkBXAbG-ZYaorzdoQeVgekeyjcG6oHAFZrpCYg47j/exec",
+      // "https://script.google.com/macros/s/AKfycbyfFhOwc_--JaCzah4oZn9jSzfGkBXAbG-ZYaorzdoQeVgekeyjcG6oHAFZrpCYg47j/exec",
+       "https://script.google.com/macros/s/AKfycbwj76tZa2nKlySrKo-eqqzr9OfrCog39h_2qVE89gutBvst01BJgaQ6uh3v7U3xUwtg/exec",
       {
         method: "POST",
         body: formDatab,
