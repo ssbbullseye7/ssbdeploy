@@ -1,0 +1,307 @@
+/* .Hero-header-content{
+font-family: Yantramanav;
+font-size: 86px;
+font-weight: 700;
+height: 100%;
+width: 100%;
+line-height: 100px;
+letter-spacing: 0em;
+text-align: left;
+display: flex;
+justify-content: center;
+align-items: center ;
+}
+.scroll{
+    transform: rotate(-90deg);
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.17em;
+    text-align: center;
+    width: fit-content;
+}
+.Mouseicon{
+
+    position: relative;
+    animation: myfirst 5s linear 200ms infinite alternate;
+  }
+  
+  @keyframes myfirst {
+    0%   {bottom:0px;}
+    25%{ bottom:5px;}
+    50%  { bottom:10px;}
+    75%{bottom:5px;}
+    100% { bottom:0px;}
+  }
+.scroll-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 25px;
+    position: absolute;
+    flex-direction: column;
+    gap: 20px;
+}
+.Image-container2{
+    height: 400px;
+    width: 350px;
+    right: 0px;
+    bottom: 0px;
+ 
+    position: absolute;
+    border-top: 30px solid white;
+    border-left: 30px solid white;
+}
+.hero{
+    position: relative;
+    padding-top: 91.6px;
+    padding-bottom: 15px;
+    height: 85vh;
+}
+.Image-container1{
+    width: 75%;
+position: relative;
+
+}
+.image {
+  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .test{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+  }
+  .visible {
+    opacity: 1;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.para-container{
+    position: relative;
+    left: 44px;
+    width: 75%;
+}
+.play-icon{
+    border:#001F3F 2px solid;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lottie{
+    position: absolute;
+
+    top: -20px;
+}
+/* .Explore-circle{
+    width: 120px;
+height: 120px;
+ background: #FFD700;
+position: absolute;
+border-radius: 100px;
+left: 170px;
+top: -15px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Hind Vadodara;
+font-size: 15px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: center;
+
+} */
+/* .watch-container{
+    display: flex;
+    gap: 20px;
+    position: relative;
+   
+}
+.arrow{
+    position: relative;
+  display: flex;
+  gap: 10px;
+}
+.watch-video{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.get-container{
+    display: flex;
+    gap: 15px;
+   
+}
+.para{
+    width: 80%;
+    position: relative;
+ 
+}
+.getintouch{
+    width:165px;
+height:50px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+border: 1px solid #001F3F;
+gap: 10px;
+font-family: Hind Vadodara;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0em;
+
+}
+.Hero-header-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+.top{
+    position: relative;
+    display: flex;
+    width: auto;
+}
+.Top-footer{
+font-family: Gilda Display;
+font-size: 38px;
+font-weight: 400;
+line-height: 56px;
+letter-spacing: 0em;
+position: relative;
+left: 44px;
+padding-right: 44px;
+}
+.Hero-header{
+padding-right: 44px;
+left: 44px;
+gap: 10px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+} */ 
+.hero{
+    position: relative;
+     padding-top: 80.6px;
+    /* padding-bottom: 15px; */ 
+    height: 90vh;
+    display: flex;
+}
+/* .Hero-header{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(224, 238, 201);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+/* .Hero-video{
+    height: 100%;
+    width: 50%;
+} */
+/* .Hero-video>video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Hero-header-content{
+    font-size: 65px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:darkolivegreen;
+}
+.Hero-video{
+    width: 50%;
+    height: 100%;
+}  */
+.hero {
+    position: relative;
+ 
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    z-index: -1; /* Ensure the image stays behind other content */
+  }
+  .background>img{
+    width: 100%; /* Adjust as needed */
+    height: 100%;
+    object-fit: cover;
+  }
+  .Hero-header {
+    position: absolute;
+    top: 150px; /* Ensure the content stays on top */
+    z-index: 1;
+  }
+  .en{
+    width: 171px;
+height: 65px;
+top: 526px;
+left: 121px;
+gap: 0px;
+font-family:Hind Vadodara;
+font-size: 24px;
+font-weight: 400;
+line-height: 27.6px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 80px;
+border: 3px solid #FFFFFF;
+color: white;
+cursor: pointer;
+  }
+  .svg-arrow{
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .Hero-header-content {
+    /* Background color for content */
+    padding: 20px; /* Adjust as needed */
+    color: white;
+    font-family:Hind Vadodara;
+font-size: 64px;
+font-weight: 700;
+line-height: 99.33px;
+margin-left: 60px;
+text-align: left;
+width: 475px;
+  }
+  

@@ -1,0 +1,314 @@
+.nda{
+    position: relative;
+     padding-top: 80.6px;
+    /* padding-bottom: 15px; */ 
+    /* height: 90vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+.nda-Hero-header {
+    position: absolute;
+    top: 100px; /* Ensure the content stays on top */
+    z-index: 1;
+  }
+
+.background-img {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%; 
+    height: 350px; 
+    z-index: -1; /* Ensure the image stays behind other content */
+  }
+  .background-img>img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+  }
+  .nda-header-content {
+    padding-bottom: 20px; 
+    color: white;
+    font-family:Hind Vadodara;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 99.33px;
+    margin-left: 60px;
+    text-align: left;
+  } 
+  
+.enrollbtn{
+    width: 351px;
+    height: 75px;
+    top: 526px;
+    left: 121px;
+    gap: 0px;
+    font-family:Hind Vadodara;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 27.6px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+    background-color: #2B5B1F ;
+    border: 3px solid #FFFFFF;
+    color: #ffd329;
+    cursor: pointer;
+  }
+  .nda-details-box{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+  }
+  .box-1{
+    display: flex;
+    margin-top: 22%;
+    padding: 10px;
+    width: 66%;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .b1-p{
+    color: rgb(0, 0, 0);
+    font-family:Hind Vadodara;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .b1-p-normal{
+    color: rgb(0, 0, 0);
+    font-family:Hind Vadodara;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27.6px;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .box-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    width: 30%;
+    margin-top: 27%;
+    height: 750px;
+    padding: 20px;
+    background-color: #2B5B1F;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .bold-text{
+    font-size: 24px;
+    font-family:Hind Vadodara;
+    font-weight: 700;
+  }
+
+  .cour-det{
+    color:#ffd329;
+    font-family:Hind Vadodara;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  .bold-text-white{
+    font-size: 24px;
+    font-family:Hind Vadodara;
+    font-weight: 700;
+    color: white;
+  }
+  .bold-text-yellow{
+    font-size: 24px;
+    font-family:Hind Vadodara;
+    font-weight: 700;
+    color: #ffd329;
+  }
+  .enquireyBtn{
+    width: 250px;
+    height: 60px;
+    top: 126px;
+    left: 21px;
+    gap: 0px;
+    font-family:Hind Vadodara;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 27.6px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #2B5B1F ;
+    border: 3px solid #FFFFFF;
+    color: #ffd329;
+    cursor: pointer;
+  }
+  .box-3{
+    margin: 30px;
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    background-color: #f7f7f7;
+  }
+  .top-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+  .top-btns>div{
+    display: flex;
+    padding: 10px 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #2B5B1F;
+    border-radius: 10px;
+    font-size: 28px;
+    font-family:Hind Vadodara;
+    font-weight: 700;
+    color: #ffd329;
+    cursor:pointer;
+    transition: all 0.3s ease;
+  }
+  .top-btns>div:hover{
+    background-color: #1a4a1a; /* Darker green */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .subject-list{
+    font-weight: 400;
+    font-size: 24px;
+    font-family:Hind Vadodara;
+    gap: 20px;
+    color: #000000;
+    text-align: left;
+  }
+
+  
+  /* ===============Responsive Design ============================*/
+
+  @media only screen and (max-width: 968px) {
+    .background-img {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%; 
+        height: 180px; 
+        z-index: -1; /* Ensure the image stays behind other content */
+      }
+
+    .nda-header-content {
+      font-size: 24px;      /* reduced from 52px */
+      line-height: 70px;    
+      margin-left: 20px;    
+      padding-bottom: 10px; 
+    }
+    
+    .enrollbtn{
+        width: 150px;
+        height: 40px;
+        top: 120px;
+        left: 10px;
+        gap: 0px;
+        font-family:Hind Vadodara;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 27.6px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        background-color: #2B5B1F ;
+      
+        color: #ffd329;
+        cursor: pointer;
+      }
+    
+
+      .nda-details-box{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .box-1{
+        width: 100%;
+        margin-top: 200px;
+      }
+      .box-2{
+        width: 90%;
+        margin-top: 20px;
+        height: auto;
+      }
+
+      .top-btns>div{
+        padding: 6px 20px;
+        font-size: 16px;
+      }
+      .subject-list{
+        font-size: 18px;
+        font-weight: 400;
+        font-family:Hind Vadodara;
+        gap: 20px;
+        color: #000000;
+        text-align: left;
+      }
+      .box-4{
+        width:90%;
+        display: flex;
+        flex-direction: column;
+      }
+      .box-4>.enrollbtn{
+        margin-left: 0px;
+      }
+      
+  }
+
+  .discount-ribbon {
+    padding: 0.2rem 0.6rem;
+    font-size: clamp(12px, 3vw, 14px);
+    transform: rotate(10deg) scale(0.9); /* Slightly smaller on mobile */
+  }
+  
+  .discount-ribbon:before {
+    width: 12px;
+    height: 12px;
+    bottom: -4px;
+    right: 12px;
+  }
+
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .discount-ribbon {
+    right: -10px;
+    top: -10px;
+    transform: rotate(5deg) scale(0.8);
+  }
+  
+  .discount-ribbon span:first-child {
+    font-size: 10px;
+    margin-right: 3px;
+  }
+}
+
