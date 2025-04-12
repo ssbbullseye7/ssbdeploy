@@ -197,6 +197,24 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
     }
   };
 
+  const handleMobileCourseSelection = (value)=>{
+    setIsCoursesOpen(false);
+    setenroll(false)
+    SetActive("Courses")
+
+    if(value === "ssb"){
+      setnda(false);
+      handleScrollTo("home");
+    }else{
+      setnda(true);
+      handleScrollTo("nda")
+    }
+
+    
+   
+
+  }
+
   useEffect(() => {
     const handleClickOutsideCourses = (event) => {
       if (
@@ -575,10 +593,7 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
             Active == "Courses" ? { paddingRight: "50px" } : { display: "none" }
           }
           onClick={() =>
-            setnda(false) &&
-            setenroll(false) &&
-            handleScrollTo("home") &&
-            SetActive("Home")
+            handleMobileCourseSelection("ssb")
           }
         >
           SSB Preparation Course
@@ -588,7 +603,11 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
           style={
             Active == "Courses" ? { paddingRight: "50px" } : { display: "none" }
           }
-          onClick={() => setnda(true) && setenroll(false)}
+          onClick={() => {
+
+            handleMobileCourseSelection("nda");
+          
+          }}
         >
           {" "}
           NDA coaching Course
