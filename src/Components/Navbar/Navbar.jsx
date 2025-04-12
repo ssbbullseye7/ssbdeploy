@@ -101,7 +101,7 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
   const handleScrollTo = (targetId) => {
     setTimeout(() => {
       smoothScrollTo(targetId);
-    }, 100);
+    }, 10);
   };
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
