@@ -42,6 +42,11 @@ select {
   flex-direction: column;
   gap: 10px;
 }
+@media screen and (max-width :800px) {
+  .form-container-en{
+    width: 100%;
+  }
+}
 legend{
   font-weight: bold;
   font-size: 20px;
@@ -157,8 +162,10 @@ text-align: center;
   font-weight: bold;
   font-size: large;
 }
+/* 22 April commented*/
+/* 24 April Uncommented */
 .Enroll-heading::after{
-  content: "[No registration Fee]";
+  content: "[Registration Fee - Rs 2000]";
   animation: blinker 1s linear infinite;
     color: #93120d;
     font-size: 20px;

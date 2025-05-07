@@ -3,7 +3,7 @@ import "./style.css";
 import sol from "../../sol.png";
 import Testimonials from "../Testimonials/Testimonials";
 import Ribbon from "../Ribon/Ribon";
-const NdaCoaching = ({ setenroll, setnda }) => {
+const NdaCoaching = ({ setenroll, setnda,setssb }) => {
   const smoothScrollTo = (id, callback) => {
     performScrollTo(id, callback);
   };
@@ -144,7 +144,8 @@ const NdaCoaching = ({ setenroll, setnda }) => {
 
       <div className="nda-details-box">
         <div className="box-1">
-          <p className="b1-p">Why Choose Us for NDA Written Exam Coaching?</p>
+          {/* Removed on 22 April */}
+          {/* <p className="b1-p">Why Choose Us for NDA Written Exam Coaching?</p> */}
           <p className="b1-p-normal">
             At <span className="bold-text">SSB Bullseye</span>, we specialize in
             preparing aspirants for the
@@ -225,14 +226,15 @@ const NdaCoaching = ({ setenroll, setnda }) => {
         <div className="box-2">
           <u className="cour-det">COURSE DETAILS</u>
           <span className="bold-text-white">
-            FIRST ONLINE NDA BATCH STARTING ON 10th May 2025
+            FIRST ONLINE NDA BATCH STARTING ON 1st November 2025
           </span>
           <br />
           <span className="bold-text-white">
             Join Our 3-Month ONLINE NDA Exam Coaching Program
-          </span>
-          <span className="bold-text-white">Starting From: 10th May 2025</span>
-
+            <br />
+        
+          <span className="bold-text-white" style={{fontSize:"medium"}}>(For NDA 1 Exam Scheduled to be conducted in April 2026)</span>
+          </span> 
           <br />
           <span className="bold-text-white">
             Get the Best Training to Crack NDA Written Exam – Now Online!
@@ -248,7 +250,7 @@ const NdaCoaching = ({ setenroll, setnda }) => {
             <span> 9000/- Only</span>
           </>
         }>
-            <div className="enquireyBtn"  onClick={()=>{ setnda(false) && handleScrollTo('contact');}}>Enquiry Now</div>
+            <div className="enquireyBtn"  onClick={()=>{ setnda(false); setssb(false) ;setenroll(false); handleScrollTo('contact');}}>Enquire Now</div>
           </Ribbon>
         </div>
       </div>
@@ -280,11 +282,6 @@ const NdaCoaching = ({ setenroll, setnda }) => {
     </div>
 
       <div style={{ marginVertical: "20px", display: "flex", marginLeft: "40px",  marginRight:"40px"}} className="box-4">
-        <p className="b1-p-normal">
-          Click on Registration. Select NDA& NA Written Exams, Enroll Today &
-          Start Your Journey Towards NDA! Don't miss this opportunity to join
-          India’s best NDA coaching institute.
-        </p>
         <div
           className="enrollbtn"
           onClick={() => {

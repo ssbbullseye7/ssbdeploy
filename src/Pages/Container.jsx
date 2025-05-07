@@ -15,20 +15,26 @@ import { useLocation } from "react-router-dom";
 import Enroll from "./Enroll";
 import NdaCoaching from "../Components/NDACoaching/NdaCoaching";
 import NdaEnroll from "./NdaEnroll";
+
+import SsbCoaching from "../Components/NDACoaching/SsbCoaching";
+
+
 function Container() {
   const [enroll, setenroll] = useState(false);
   const [nda, setnda] = useState(false);
+  const [ssb,setSSB] = useState(false);
   return (
     <div>
-      <Navbar enroll={enroll} nda={nda} setenroll={setenroll} setnda={setnda} />
-      {enroll && !nda  && <Enroll />}
-      {enroll && nda  && <NdaEnroll />}
-      {nda && !enroll && <NdaCoaching  setenroll={setenroll} setnda={setnda} />}
-      {!enroll && !nda && (
+      <Navbar enroll={enroll} nda={nda} setenroll={setenroll} setnda={setnda} ssb={ssb} setSSB={setSSB}/>
+      {enroll && !nda  && !ssb && <Enroll />}
+      {enroll && nda  && !ssb && <NdaEnroll />}
+      {nda && !enroll && !ssb && <NdaCoaching  setenroll={setenroll} setnda={setnda} setssb={setSSB} />}
+      {!nda && !enroll && ssb && <SsbCoaching setenroll={setenroll} setSSB={setSSB}/>}
+      {!enroll && !nda && !ssb && (
         <>
           <Hero enroll={enroll} setenroll={setenroll}  />
           <Aboutceo />
-          <Feature enroll={enroll} setenroll={setenroll} />
+          {/* <Feature enroll={enroll} setenroll={setenroll} /> */}
           <Testimonials />
           {/* <Classroom enroll={enroll} setenroll={setenroll}/> */}
           {/* <Point/> */}
@@ -36,6 +42,7 @@ function Container() {
           {/* <Employee/> */}
           {/* <Blogs /> */}
           <Contact />
+          {/* <SsbCoaching /> */}
         </>
       )}
 
