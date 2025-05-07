@@ -67,7 +67,7 @@ function Footer() {
             {/* We are always there to help you with your queries. Please feel free to contact us. */}
             <div> <FaPhoneAlt style={{height:"15px",width:"15px"}}/> +(91) 97427 53113</div>
             <div> <IoLogoWhatsapp  style={{height:"15px",width:"15px"}}/> +(91) 83103 89908</div>
-            <div> < MdEmail style={{height:"15px",width:"15px"}}/> support@ssbbullseye.com</div>
+            <div> < MdEmail style={{height:"15px",width:"15px"}}/> ssbbullseye@gmail.com</div>
             <div> <IoIosGlobe style={{height:"15px",width:"15px"}}/> www.ssbbullseye.com</div>
             </div>
          </div>

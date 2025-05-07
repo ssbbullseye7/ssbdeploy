@@ -6,7 +6,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 // import { Link as RouterLink } from "react-router-dom";
 // import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 // import { setActiveLink } from "react-scroll/modules/mixins/scroller";
-function Navbar({ setenroll, enroll, setnda, nda }) {
+function Navbar({ setenroll, enroll, setnda, nda ,ssb,setSSB}) {
   const [isRegOpen, setIsRegOpen] = useState(false);
   const regDropdownRef = useRef(null);
   const regContainerRef = useRef(null);
@@ -186,14 +186,16 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
   const handleCoursesSelection = (value) => {
     setIsCoursesOpen(false);
     if (value === "ssb") {
-      handleScrollTo("home");
+      handleScrollTo("nda");
       SetActive("Courses");
       setenroll(false);
       setnda(false);
+      setSSB(true);
     } else if (value === "nda") {
       setnda(true);
       setenroll(false);
       SetActive("Courses");
+      setSSB(false);
     }
   };
 
@@ -204,9 +206,11 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
 
     if(value === "ssb"){
       setnda(false);
-      handleScrollTo("home");
+      setSSB(true);
+      handleScrollTo("nda");
     }else{
       setnda(true);
+      setSSB(false);
       handleScrollTo("nda")
     }
 
@@ -236,7 +240,12 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
       <div
         className="logo"
         style={{ cursor: "pointer", paddingLeft: "80px" }}
-        onClick={() => setenroll(false)}
+        onClick={() => {
+          setenroll(false)
+          setSSB(false);
+          setnda(false);
+        }
+        }
       >
         <img src={svglogo} alt="" width={120} />
       </div>
@@ -254,6 +263,7 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
           onClick={() => {
             setnda(false);
             setenroll(false);
+            setSSB(false);
             handleScrollTo("home");
             SetActive("Home");
           }}
@@ -273,6 +283,7 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
           onClick={() => {
             setnda(false);
             setenroll(false);
+            setSSB(false);
             handleScrollTo("about");
             SetActive("About us");
           }}
@@ -308,7 +319,7 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
                 onClick={() => {
                   setenroll(true);
                   setnda(false);
-                  handleScrollTo("enroll");
+                  setSSB(false);
                   SetActive("Registration");
                   setIsRegOpen(false);
                 }}
@@ -320,6 +331,7 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
                 onClick={() => {
                   setenroll(true);
                   setnda(true);
+                  setSSB(false);
                   SetActive("Registration");
                   setIsRegOpen(false);
                 }}
@@ -539,6 +551,7 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
           onClick={() => {
             setenroll(true);
             setnda(false);
+            setSSB(false);
             handleScrollTo("enroll");
             SetActive("Registration");
           }}
@@ -555,6 +568,7 @@ function Navbar({ setenroll, enroll, setnda, nda }) {
           onClick={() => {
             setenroll(true);
             setnda(true);
+            setSSB(false);
             handleScrollTo("enroll");
             SetActive("Registration");
           }}

@@ -27,7 +27,7 @@ function Contact() {
     setIsSubmitting(true);
     emailjs.sendForm('service_n9wwfu1', 'template_7i6ggdh', e.target, process.env.REACT_APP_API_KEY_EMAILJS)
       .then((result) => {
-        console.log(result.text);
+    
         toast.success('Message sent successfully!');
         setFormData({
           name: '',

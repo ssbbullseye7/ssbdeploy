@@ -11,6 +11,7 @@ import uppic from "../uppic.jpg"
 
 import emailjs from 'emailjs-com'
 
+
 // Modal component
 const BackDetailsModal = ({ isOpen, closeModal }) => {
   return (
@@ -80,6 +81,8 @@ function NdaEnroll() {
   const[appliedfor,setAppliedfor] = useState("")
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [address,setAddress] = useState("")
+  const [courseChoice,setCourseChoice] = useState("3 months")
+  const [paymentNda,setPaymentNda] = useState("12000");
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -330,7 +333,34 @@ function NdaEnroll() {
               required
             />
           </div>
-          
+          <div class="form-group">
+            <label>
+              Courses<small>*</small>
+            </label>
+            <select
+              name="courses"
+              id="courses"
+              class="form-control"
+              value={courseChoice}
+              onChange={(e) => {
+                setCourseChoice(e.target.value);
+                if(e.target.value === "3 Months"){
+                  setPaymentNda("12000")
+                }else if (e.target.value === "Inaugration"){
+                  setPaymentNda("9000")
+
+                }else{
+                  setPaymentNda("20000")
+                }
+              }}
+              required
+            >
+              <option value="3 Months">3 Months</option>
+              <option value="6 Months">6 Months</option>
+              <option value="Inaugration">Discounted Inaugration Batch</option>
+            </select>{" "}
+          </div>
+
           <div class="form-group">
             <label>
               Total Amount to be Paid <small>*</small>
@@ -340,7 +370,7 @@ function NdaEnroll() {
               id="amount"
               class="form-control"
               type="text"
-              placeholder="9000"
+              placeholder={paymentNda}
               readonly=""
             />
           </div>

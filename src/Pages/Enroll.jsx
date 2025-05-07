@@ -87,6 +87,8 @@ function Enroll() {
   const [navy, setNavy] = useState("");
   const [force, setForce] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  /* Payment status change based on options */
+  const [paymentSSb,setPaymentSSb] = useState("Null");
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -430,19 +432,25 @@ function Enroll() {
               value={registration}
               onChange={(e) => {
                 setRegistration(e.target.value);
+                if(e.target.value == "One on One")
+                setPaymentSSb("18000")
+                else
+                setPaymentSSb("12000")
               }}
               required
             >
               <option value="">Select Type</option>
-              <option value="Batch 1 Registration ( 2-6 Candidates )">
-                Batch 1 Registration ( 2-6 Candidates )
+              <option value="Regular Batch (Max 10 Candidates)">
+                {/* Batch 1 Registration ( 2-6 Candidates ) */}
+                Regular Batch (Max 10 Candidates)
               </option>
-              <option value="Batch 2 Registration ( 7-11 Candidates )">
-                Batch 2 Registration ( 7-11 Candidates )
+              <option value="One on One">
+                {/* Batch 2 Registration ( 7-11 Candidates ) */}
+                One on One
               </option>
-              <option value="Batch 3 Registration ( 12-16 Candidates )">
+              {/* <option value="Batch 3 Registration ( 12-16 Candidates )">
                 Batch 3 Registration ( 12-16 Candidates )
-              </option>
+              </option> */}
             </select>{" "}
           </div>
           <div class="form-group">
@@ -620,7 +628,7 @@ function Enroll() {
               id="amount"
               class="form-control"
               type="text"
-              placeholder="10000"
+              placeholder={paymentSSb}
               readonly=""
             />
           </div>
