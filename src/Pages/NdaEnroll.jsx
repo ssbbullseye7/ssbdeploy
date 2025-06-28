@@ -214,7 +214,7 @@ function NdaEnroll() {
     <>
     <Toaster></Toaster>
       <BackDetailsModal isOpen={isModalOpen} closeModal={closeModal} />
-      <div className="Enroll-page-nda" id="enroll">
+      <div className="Enroll-page" id="enroll">
         <div className="Enroll-heading">Enroll now</div>
         <form
           onSubmit={(e) => {
