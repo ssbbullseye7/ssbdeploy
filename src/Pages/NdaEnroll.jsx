@@ -215,7 +215,9 @@ function NdaEnroll() {
     <Toaster></Toaster>
       <BackDetailsModal isOpen={isModalOpen} closeModal={closeModal} />
       <div className="Enroll-page" id="enroll">
+        <div className="nda-page">
         <div className="Enroll-heading">Enroll now</div>
+          </div>
         <form
           onSubmit={(e) => {
             handlePayment(e);
