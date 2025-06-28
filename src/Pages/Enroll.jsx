@@ -433,7 +433,7 @@ function Enroll() {
               onChange={(e) => {
                 setRegistration(e.target.value);
                 if(e.target.value == "One on One")
-                setPaymentSSb("18000")
+                setPaymentSSb("16000")
                 else
                 setPaymentSSb("12000")
               }}
