@@ -164,7 +164,7 @@ text-align: center;
 }
 /* 22 April commented*/
 /* 24 April Uncommented */
-.Enroll-page-nda .Enroll-heading::after{
+.Enroll-heading::after{
   content: "[Registration Fee - Rs 2000]";
   animation: blinker 1s linear infinite;
     color: #93120d;
