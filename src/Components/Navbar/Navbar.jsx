@@ -558,7 +558,7 @@ function Navbar({ setenroll, enroll, setnda, nda ,ssb,setSSB}) {
         >
           SSB Registration
         </a>
-        <a
+        {/* <a
           className="mobile-drop"
           style={
             Active == "Registration"
@@ -574,7 +574,7 @@ function Navbar({ setenroll, enroll, setnda, nda ,ssb,setSSB}) {
           }}
         >
           NDA Registration
-        </a>
+        </a> */}
 
         <div
           className="link1"
@@ -612,7 +612,7 @@ function Navbar({ setenroll, enroll, setnda, nda ,ssb,setSSB}) {
         >
           SSB Preparation Course
         </a>
-        <a
+        {/* <a
           className="mobile-drop"
           style={
             Active == "Courses" ? { paddingRight: "50px" } : { display: "none" }
@@ -625,7 +625,7 @@ function Navbar({ setenroll, enroll, setnda, nda ,ssb,setSSB}) {
         >
           {" "}
           NDA coaching Course
-        </a>
+        </a> */}
 
         <div
           className="link1"
