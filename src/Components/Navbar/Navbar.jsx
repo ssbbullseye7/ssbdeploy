@@ -326,7 +326,7 @@ function Navbar({ setenroll, enroll, setnda, nda ,ssb,setSSB}) {
               >
                 SSB Registration
               </div>
-              {/* <div
+             <div
                 className="dropdown-item"
                 onClick={() => {
                   setenroll(true);
@@ -337,7 +337,7 @@ function Navbar({ setenroll, enroll, setnda, nda ,ssb,setSSB}) {
                 }}
               >
                 NDA Registration
-              </div> */}
+              </div> 
             </div>
           )}
         </div>
